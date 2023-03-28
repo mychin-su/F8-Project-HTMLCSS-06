@@ -82,6 +82,7 @@ button {
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
+    box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
 }
 
 /* =========Header========== */
@@ -116,6 +117,21 @@ button {
 .header-cta__btn {
     --height: 50px;
     width: 118px;
+}
+
+.section__heading {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.19;
+    color: #000958;
+}
+
+.section-desc {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #656689;
 }
 
 /* ========hero======== */
@@ -277,4 +293,292 @@ button {
     line-height: 1.6;
     text-decoration: underline;
     color: #000958;
+}
+
+/* About */
+
+.about {
+    margin-top: 138px;
+}
+
+.about__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 146px;
+}
+
+.about__media {
+    position: relative;
+}
+
+.about__label {
+    font-family: Sora, sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #5e6085;
+}
+
+.about__heading {
+    margin-top: 15px;
+}
+
+.about__heading,
+.about__desc {
+    width: 444px;
+}
+
+.about__checklist {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 54px;
+    justify-content: flex-start;
+    gap: 36px;
+}
+
+.about__check-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #48496a;
+}
+
+.about__check-item::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #ff5d31;
+    box-shadow: 0px 4px 15px -3px rgba(255, 93, 49, 0.69);
+    border-radius: 4px;
+}
+
+.about__check-item::after {
+    content: url(../icon/check.svg);
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+.about__card {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    padding: 30px 26px;
+    width: 136px;
+    background: #5bd6e2;
+    box-shadow: -15px 26px 48px rgba(85, 240, 255, 0.17);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about__card-title {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.about__card-desc {
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    color: #c6f4f9;
+}
+
+.about__decor {
+    position: absolute;
+    top: -39px;
+    right: -32px;
+}
+
+.about__img-wrap {
+    position: relative;
+    width: 494px;
+    margin-left: auto;
+}
+
+.about__img-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 336px;
+    /* Chiem het chieu ngang the cha */
+    background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.about__img {
+    display: block;
+    margin: 0 auto;
+    width: 450px;
+}
+
+.about__media-decor {
+    position: absolute;
+    top: 157px;
+    right: -50px;
+    z-index: -2;
+}
+
+.about__img-wrap-bottom {
+    width: 458px;
+    margin-left: 0;
+    background: linear-gradient(180deg, #c6e2fa 0%, #94c2ea 100%);
+    border: 2px solid #ffffff;
+    box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+    border-radius: 18px;
+}
+
+.about__img-wrap-bottom::after {
+    content: none;
+}
+
+.about__img-bottom {
+    width: 100%;
+}
+
+.about__decor-img {
+    position: absolute;
+}
+
+.about__decor-img:nth-child(1) {
+    top: 13px;
+    right: 64px;
+}
+
+.about__decor-img:nth-child(2) {
+    top: -16px;
+    right: 13px;
+}
+
+.about__decor-img:nth-child(3) {
+    right: -21px;
+    top: 33px;
+}
+
+.about__decor-img:nth-child(4) {
+    top: 216px;
+    right: -33px;
+}
+
+.about__decor-img:nth-child(5) {
+    bottom: 150px;
+    right: 19px;
+}
+
+.about__decor-img:nth-child(6) {
+    right: -24px;
+    bottom: -40px;
+}
+
+.about__decor-img:nth-child(7) {
+    right: -33px;
+    bottom: -47px;
+}
+
+.about__decor-img:nth-child(8) {
+    right: -42px;
+    bottom: -55px;
+}
+
+.about-bottom__heading {
+    width: 534px;
+}
+
+.about-bottom__desc {
+    width: 511px;
+    margin-bottom: 50px;
+}
+
+.tab__list {
+    position: relative;
+    column-gap: 56px;
+    display: flex;
+    padding-bottom: 6px;
+}
+
+.tab__item-active::after,
+.tab .tab__list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 91, 46, 0.07);
+    border-radius: 1px;
+}
+
+.tab__item {
+    display: flex;
+    align-items: center;
+}
+
+.tab__title {
+    margin-left: 13px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #48496a;
+}
+
+.tab__item-active::after {
+    width: 95px;
+    background-color: #ff5b2e;
+}
+
+.tab__contents {
+    padding: 36px 0;
+}
+
+.tab__content-desc {
+    width: 391px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    color: #656689;
+}
+
+.tab__content-more {
+    position: relative;
+    display: inline-block;
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #ff5d31;
+}
+
+.tab__content-more::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #ff5531;
+    border-radius: 1px;
+}
+
+.tab__content {
+    display: none;
+}
+
+.tab__content-active {
+    display: block;
+}
+
+.about__content-bottom {
+    margin-top: 80px;
 }
