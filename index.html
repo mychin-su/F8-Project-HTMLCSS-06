@@ -66,24 +66,24 @@
             <div class="container">
                 <div class="header__inner">
                     <!-- Logo -->
-                    <a href="#!"> <img src="./assets/icon/logo.svg" alt="Lucy" class="logo" /></a>
+                    <a href="\"> <img src="./assets/icon/logo.svg" alt="Lucy" class="logo" /></a>
                     <!-- Navigation -->
                     <nav class="navbar">
                         <ul class="navbar__list">
                             <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Home</a>
+                                <a href="#home" class="navbar__link">Home</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="navbar__link">About</a>
+                                <a href="#about" class="navbar__link">About</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="navbar__link">Services & Rates</a>
+                                <a href="#service" class="navbar__link">Services & Rates</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="navbar__link">Reviews</a>
+                                <a href="#review" class="navbar__link">Reviews</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="navbar__link">Contacts us</a>
+                                <a href="#contact" class="navbar__link">Contacts us</a>
                             </li>
                         </ul>
                     </nav>
@@ -98,7 +98,7 @@
             </div>
         </header>
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="container">
                 <div class="hero__inner">
                     <!-- Hero-left -->
@@ -190,7 +190,7 @@
             </div>
         </section>
         <!-- About -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__inner">
                     <div class="about__content">
@@ -281,20 +281,18 @@
                             </div>
                         </figure>
                     </div>
-                    <div class="about__content about__content-bottom">
-                        <h2 class="section__heading about-bottom__heading">
-                            Taking A Vacation? So Is Your Pet.
-                        </h2>
-                        <p class="section-desc about-bottom__desc">
+                    <section class="about__content">
+                        <h2 class="section__heading">Taking A Vacation? So Is Your Pet.</h2>
+                        <p class="section-desc about__desc-bottom">
                             We offer long-term and short-term boarding. Every dog has its own
                             private, spacious room and daily individual time in our large play yard.
                         </p>
                         <div class="tab">
                             <ul class="tab__list">
                                 <!-- Tab  item 1 -->
-                                <li class="tab__item tab__item-active">
+                                <li class="tab__item tab__item--active">
                                     <img
-                                        src="./assets/icon/tav-icon1.svg"
+                                        src="./assets/icon/tav-icon1.png"
                                         alt=""
                                         class="tab__icon"
                                     />
@@ -304,7 +302,7 @@
                                 <!-- Tab item 2 -->
                                 <li class="tab__item">
                                     <img
-                                        src="./assets/icon/tav-icon2.svg"
+                                        src="./assets/icon/tav-icon2.png"
                                         alt=""
                                         class="tab__icon"
                                     />
@@ -314,7 +312,7 @@
                                 <!-- Tab item 3 -->
                                 <li class="tab__item">
                                     <img
-                                        src="./assets/icon/tav-icon3.svg"
+                                        src="./assets/icon/tav-icon3.png"
                                         alt=""
                                         class="tab__icon"
                                     />
@@ -323,7 +321,7 @@
                             </ul>
                             <div class="tab__contents">
                                 <!-- Tab content 1 -->
-                                <div class="tab__content tab__content-active">
+                                <div class="tab__content-item tab__content-item--active">
                                     <p class="tab__content-desc">
                                         While you're on holiday, here's where your furry friends
                                         will spend their time 1.
@@ -332,7 +330,7 @@
                                 </div>
 
                                 <!-- Tab content 2 -->
-                                <div class="tab__content">
+                                <div class="tab__content-item">
                                     <p class="tab__content-desc">
                                         While you're on holiday, here's where your furry friends
                                         will spend their time 2.
@@ -341,7 +339,7 @@
                                 </div>
 
                                 <!-- Tab content 3 -->
-                                <div class="tab__content">
+                                <div class="tab__content-item">
                                     <p class="tab__content-desc">
                                         While you're on holiday, here's where your furry friends
                                         will spend their time 3.
@@ -350,39 +348,29 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>
         <!-- Service -->
-        <section class="service">
+        <section class="service" id="service">
             <div class="container">
                 <div class="service__inner">
-                    <p class="title__desc section__label">What we do for you?</p>
-                    <h2 class="section__heading title__heading">Our Services</h2>
-                    <div class="service__list">
+                    <section class="service__top">
+                        <p class="title__desc section__label">What we do for you?</p>
+                        <h2 class="section__heading title__heading">Our Services</h2>
+                    </section>
+                    <div class="service__body">
                         <!-- Service-Left -->
                         <!-- Item 1 -->
-                        <div>
+                        <div class="service__column">
                             <div class="service-item">
                                 <h3 class="service-item__heading">Puppy Sitting</h3>
                                 <p class="service-item__desc">
                                     Helping your new pup to be a good boy or girl isn’t always easy,
                                     but we’re here to help.
                                 </p>
-                                <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="#!">Read More</a>
                             </div>
                             <!-- item 2 -->
                             <div class="service-item">
@@ -391,19 +379,7 @@
                                     Choose from a 30, 45, or 60-minute visit to give your pet their
                                     daily dose of fun-filled.
                                 </p>
-                                <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="#!">Read More</a>
                             </div>
                             <!-- Item 3 -->
                             <div class="service-item">
@@ -412,19 +388,7 @@
                                     While you’re away we can make sure your pet has all the food,
                                     water, exercise, and, of course.
                                 </p>
-                                <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="#!">Read More</a>
                             </div>
                         </div>
 
@@ -438,7 +402,7 @@
                         </figure>
                         <!-- Service-right -->
                         <!-- Item 4 -->
-                        <div>
+                        <div class="service__column">
                             <div class="service-item">
                                 <h3 class="service-item__heading">Overnight Care</h3>
                                 <p class="service-item__desc">
@@ -446,12 +410,7 @@
                                     in the evening and morning.
                                 </p>
                                 <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
+                                    <a class="service-item__row-link" href="">Read More</a>
                                     <img
                                         src="./assets/icon/service-icon.svg"
                                         alt=""
@@ -466,19 +425,7 @@
                                     Does your pet need a lift to the groomers, vet, or dog park?
                                     We’ve got their tail covered.
                                 </p>
-                                <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="#!">Read More</a>
                             </div>
                             <!-- Item 6 -->
                             <div class="service-item">
@@ -487,19 +434,7 @@
                                     Our team of experienced professionals can help with everything
                                     from pills to injections.
                                 </p>
-                                <div class="service-item__row">
-                                    <a
-                                        class="service-item__row-link"
-                                        href="./assets/icon/service-icon.svg"
-                                        class="service-item__link"
-                                        >Read More</a
-                                    >
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="#!">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -644,7 +579,7 @@
             </div>
         </section>
         <!-- Review -->
-        <section class="review">
+        <section class="review" id="review">
             <div class="container">
                 <div class="review__inner">
                     <div class="review__row">
@@ -784,7 +719,7 @@
             </div>
         </section>
         <!-- Footer -->
-        <section class="footer">
+        <section class="footer" id="contact">
             <div class="footer__inner">
                 <div class="footer__item1">
                     <a href="\"> <img src="./assets/icon/logo.svg" alt="Lucy" class="logo" /></a>
