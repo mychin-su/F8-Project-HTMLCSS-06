@@ -614,19 +614,17 @@ button {
 
 /* ==========Service============== */
 .service {
-    position: relative;
     background: #fff6ed;
-    z-index: -2;
     padding: 68px 0 100px;
     margin-top: 190px;
 }
 
 .service__body {
+    align-items: center;
     margin-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    column-gap: 66px;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 65px;
 }
 
 .service__column {
@@ -635,8 +633,7 @@ button {
 }
 
 .service-item {
-    row-gap: 24px;
-    width: 298px;
+    width: 294px;
     padding: 30px;
     background: #fff;
     border: 2px solid rgba(255, 188, 122, 0.26);
@@ -666,7 +663,6 @@ button {
 }
 
 .service-item__desc {
-    width: 244px;
     margin-top: 18px;
     font-weight: 400;
     font-size: 1.4rem;
@@ -687,38 +683,46 @@ button {
 
 .service-item__row-link::after {
     content: url(../icon/service-icon.svg);
-    margin-left: 5px;
+    margin-left: 1px 0 0 5px;
 }
 
 .service-item__thumb {
-    margin-top: -50px;
+    margin-top: 18px;
     position: relative;
-    width: 440px;
-    margin-left: auto;
 }
 
 .service-item__thumb::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 16px;
+    right: 16px;
     bottom: 0;
     /* Chiem het chieu ngang the cha */
     height: 350px;
     background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
     border-radius: 10px;
-    z-index: -1;
+    /* khong nen dat z i-index vì đã có màu nền nên nêu dặt z-index thi sẽ bị ẩn vì đó nên đặt vào img lên trên thay vì bgc xuống dưới */
 }
 
 .service-item__img {
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+    /* phai co position moi co z-index  */
     display: block;
-    margin: 0 auto;
-    width: 447px;
+    width: 100%;
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .service-btn__action {
-    margin-top: -30px;
     min-width: 214px;
+    color: #ff5b2e;
+    border-color: currentColor;
 }
 
 /* =======Member ========= */
