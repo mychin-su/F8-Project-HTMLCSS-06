@@ -798,6 +798,7 @@ button {
 
 .staff__list-item:nth-child(even) .staff__list-item-thumb::after {
     bottom: initial;
+    /* hủy bỏ bottom: 0 ở trên */
     top: 16px;
 }
 
