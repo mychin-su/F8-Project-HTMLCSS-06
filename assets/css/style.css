@@ -138,16 +138,17 @@ button {
 /* =========Header========== */
 .header {
     padding: 25px 0 13px;
-    position: sticky;
+    /* position: sticky; */
     top: -12px;
     z-index: 1;
     background: #fff6ed;
 }
 
 .header__inner {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar__list {
@@ -651,15 +652,14 @@ button {
 
 .service-item__heading::before {
     position: absolute;
-    left: -12px;
-    bottom: 50%;
+    inset: 0 auto 0 0;
+    /* top: 0 right: auto bottom: 0 right: 0 */
+    /* Chiem het chieu cao */
     display: inline-block;
     content: "";
-    width: 22px;
-    height: 2px;
+    width: 2px;
     border-radius: 1px;
-    background-image: linear-gradient(to right, #ff5b2e, #ffa187);
-    transform: rotate(90deg);
+    background-image: linear-gradient(#ff5b2e, #ffa187);
 }
 
 .service-item__desc {
@@ -725,52 +725,92 @@ button {
     border-color: currentColor;
 }
 
-/* =======Member ========= */
-.member {
+/* =======staff ========= */
+.staff {
     margin: 65px 0;
     padding: 65px 0;
 }
 
-.member__list {
+.staff__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 35px;
+    margin-top: 45px;
 }
 
-.member__list-item {
-    margin-top: 45px;
-    width: 266px;
-    padding-top: 14px;
+.staff__list-item {
     text-align: center;
 }
 
-.member__list-item-thumb {
+.staff__list-item-thumb {
     position: relative;
-    width: 230px;
+    margin: 0 16px;
+    /* trang tri hoa tiet */
+    border-radius: 130px;
 }
 
-.member__list-item-thumb::after {
+.staff__list-item-thumb::before {
     content: "";
     position: absolute;
     left: 0;
-    right: 0;
     bottom: 0;
     /* Chiem het chieu ngang the cha */
     height: 266px;
-    width: 245px;
-    background: #90ccff;
-    border-radius: 129.5px;
-    z-index: -1;
+    width: 100%;
+    background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+    border-radius: 130px;
 }
 
-.member__img {
+.staff__list-item-thumb::after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.staff__list-item:nth-child(1) .staff__list-item-thumb::after {
+    content: url(../icon/member-icon1.svg);
+}
+
+.staff__list-item:nth-child(2) .staff__list-item-thumb::before {
+    background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.staff__list-item:nth-child(2) .staff__list-item-thumb::after {
+    content: url(../icon/member-icon2.svg);
+}
+
+.staff__list-item:nth-child(3) .staff__list-item-thumb::before {
+    background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.staff__list-item:nth-child(3) .staff__list-item-thumb::after {
+    content: url(../icon/member-icon3.svg);
+}
+
+.staff__list-item:nth-child(4) .staff__list-item-thumb::before {
+    background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.staff__list-item:nth-child(4) .staff__list-item-thumb::after {
+    content: url(../icon/member-icon4.svg);
+}
+
+.staff__list-item:nth-child(even) .staff__list-item-thumb::after {
+    bottom: initial;
+    top: 16px;
+}
+
+.staff__img {
+    position: relative;
+    z-index: 1;
+    /* nen vao ảnh để khi có màu nền cho toàn bộ container của staff thi z-index -1 vào before thì nó sẽ nằm dưới màu nền*/
     display: block;
-    margin: 0 auto;
-    width: 245px;
-    border-radius: 129.5px;
+    width: 100%;
+    border-radius: inherit;
 }
 
-.member__item-desc {
+.staff__item-desc {
     margin-top: 34px;
     font-weight: 400;
     font-size: 1.4rem;
@@ -778,7 +818,7 @@ button {
     color: #656689;
 }
 
-.member__item-name {
+.staff__item-name {
     margin-top: 14px;
     font-weight: 600;
     font-size: 2.2rem;
@@ -786,27 +826,7 @@ button {
     color: #000958;
 }
 
-.member__decor1,
-.member__decor2,
-.member__decor3,
-.member__decor,
-.member__decor4 {
-    position: absolute;
-}
-
-.member__decor3,
-.member__decor1 {
-    top: 180px;
-    left: -13px;
-}
-
-.member__decor4,
-.member__decor2 {
-    top: 30px;
-    left: -12px;
-}
-
-.member-btn__action {
+.staff-btn__action {
     min-width: 193px;
     margin-top: 48px;
 }
@@ -1266,4 +1286,67 @@ button {
     line-height: 1.17;
     color: #656689;
     opacity: 0.5;
+}
+
+/* Navbar-mobile */
+.nav__bars-btn {
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
+    /* display: none; */
+    cursor: pointer;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Chiem het man hanh */
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    max-width: 100%;
+    background: #fff6ed;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+    opacity: 0;
+}
+
+.nav__mobile-list {
+    margin-top: 50px;
+    padding-left: 30px;
+}
+
+.nav__mobile-link {
+    margin-bottom: 30px;
+    color: #333;
+    display: block;
+    /* de xet padding */
+    padding: 8px 0;
+    font-size: 1.6rem;
+}
+
+.nav__mobile-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
 }

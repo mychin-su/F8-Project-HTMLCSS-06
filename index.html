@@ -5,6 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lucy - Established & Trusted Pet Care Service</title>
+        <!-- Font Aweson icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
         <!-- Reset css -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <!-- Embed font -->
@@ -68,7 +73,8 @@
                     <!-- Logo -->
                     <a href="\"> <img src="./assets/icon/logo.svg" alt="Lucy" class="logo" /></a>
                     <!-- Navigation -->
-                    <nav class="navbar">
+                    <nav class="nav-pc">
+                        <!-- Nav-Pc -->
                         <ul class="navbar__list">
                             <li class="navbar__item">
                                 <a href="#home" class="navbar__link">Home</a>
@@ -87,13 +93,49 @@
                             </li>
                         </ul>
                     </nav>
-                    <!--Header - Action -->
+
+                    <label for="nav-mobile-input" class="nav__bars-btn">
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                    </label>
+
+                    <input
+                        hidden
+                        type="checkbox"
+                        name=""
+                        id="nav-mobile-input"
+                        class="nav__input"
+                    />
+
+                    <label for="nav-mobile-input" class="nav__overlay"></label>
+
+                    <nav class="nav__mobile">
+                        <label for="nav-mobile-input" class="nav__mobile-close">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </label>
+                        <ul class="nav__mobile-list">
+                            <li>
+                                <a href="#home" class="nav__mobile-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="nav__mobile-link">About</a>
+                            </li>
+                            <li>
+                                <a href="#service" class="nav__mobile-link">Services & Rates</a>
+                            </li>
+                            <li>
+                                <a href="#review" class="nav__mobile-link">Reviews</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="nav__mobile-link">Contacts us</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Header - Action -->
                     <div class="header__action">
                         <a href="#!" class="header-action__link">Sign in</a>
                         <a href="#!" class="btn header-action__btn">Sign up</a>
                     </div>
-
-                    <!-- Hero -->
                 </div>
             </div>
         </header>
@@ -365,7 +407,9 @@
                         <!-- Item 1 -->
                         <div class="service__column">
                             <div class="service-item">
-                                <h3 class="service-item__heading">Puppy Sitting</h3>
+                                <h3>
+                                    <a href="#!" class="service-item__heading">Puppy Sitting</a>
+                                </h3>
                                 <p class="service-item__desc">
                                     Helping your new pup to be a good boy or girl isn’t always easy,
                                     but we’re here to help.
@@ -374,7 +418,7 @@
                             </div>
                             <!-- item 2 -->
                             <div class="service-item">
-                                <h3 class="service-item__heading">Dog Walking</h3>
+                                <h3><a href="#!" class="service-item__heading">Dog Walking</a></h3>
                                 <p class="service-item__desc">
                                     Choose from a 30, 45, or 60-minute visit to give your pet their
                                     daily dose of fun-filled.
@@ -383,7 +427,7 @@
                             </div>
                             <!-- Item 3 -->
                             <div class="service-item">
-                                <h3 class="service-item__heading">Pet Sitting</h3>
+                                <h3><a href="#!" class="service-item__heading">Pet Sitting</a></h3>
                                 <p class="service-item__desc">
                                     While you’re away we can make sure your pet has all the food,
                                     water, exercise, and, of course.
@@ -411,23 +455,18 @@
                         <!-- Item 4 -->
                         <div class="service__column">
                             <div class="service-item">
-                                <h3 class="service-item__heading">Overnight Care</h3>
+                                <h3>
+                                    <a href="#!" class="service-item__heading">Overnight Care</a>
+                                </h3>
                                 <p class="service-item__desc">
                                     If you’re away for the night, we can stay the night or stop by
                                     in the evening and morning.
                                 </p>
-                                <div class="service-item__row">
-                                    <a class="service-item__row-link" href="">Read More</a>
-                                    <img
-                                        src="./assets/icon/service-icon.svg"
-                                        alt=""
-                                        class="service-item__icon"
-                                    />
-                                </div>
+                                <a class="service-item__row-link" href="">Read More</a>
                             </div>
                             <!-- Item 5 -->
                             <div class="service-item">
-                                <h3 class="service-item__heading">Pet Taxi</h3>
+                                <h3><a href="#!" class="service-item__heading">Pet Taxi</a></h3>
                                 <p class="service-item__desc">
                                     Does your pet need a lift to the groomers, vet, or dog park?
                                     We’ve got their tail covered.
@@ -436,7 +475,9 @@
                             </div>
                             <!-- Item 6 -->
                             <div class="service-item">
-                                <h3 class="service-item__heading">Pet Medical Admin</h3>
+                                <h3>
+                                    <a href="#!" class="service-item__heading">Pet Medical Admin</a>
+                                </h3>
                                 <p class="service-item__desc">
                                     Our team of experienced professionals can help with everything
                                     from pills to injections.
@@ -448,64 +489,49 @@
                 </div>
             </div>
         </section>
-        <!-- Member -->
-        <section class="member">
+        <!-- Staff -->
+        <section class="staff">
             <div class="container">
-                <div class="member__inner">
+                <div class="staff__inner">
                     <p class="section__label title__desc">Pet Care Staff</p>
                     <h2 class="section__heading title__heading">Meet Our Groomers</h2>
-                    <div class="member__list">
-                        <div class="member__list-item">
-                            <figure class="member__list-item-thumb">
-                                <img src="./assets/img/member1.png" alt="" class="member__img" />
-                                <img
-                                    src="./assets/icon/member-icon1.svg"
-                                    alt=""
-                                    class="member__decor1"
-                                />
+
+                    <div class="staff__list">
+                        <!-- Staff item 1 -->
+                        <article class="staff__list-item">
+                            <figure class="staff__list-item-thumb">
+                                <img src="./assets/img/member1.png" alt="" class="staff__img" />
                             </figure>
-                            <p class="member__item-desc">Pet Trainer</p>
-                            <h3 class="member__item-name">Meghan Samit</h3>
-                        </div>
-                        <div class="member__list-item">
-                            <figure class="member__list-item-thumb">
-                                <img src="./assets/img/member2.png" alt="" class="member__img" />
-                                <img
-                                    src="./assets/icon/member-icon2.svg"
-                                    alt=""
-                                    class="member__decor2"
-                                />
+                            <p class="staff__item-desc">Pet Trainer</p>
+                            <h3 class="staff__item-name">Meghan Samit</h3>
+                        </article>
+                        <!-- Staff item 2 -->
+                        <article class="staff__list-item">
+                            <figure class="staff__list-item-thumb">
+                                <img src="./assets/img/member2.png" alt="" class="staff__img" />
                             </figure>
-                            <p class="member__item-desc">Veterinarian</p>
-                            <h3 class="member__item-name">Alissa Silva</h3>
-                        </div>
-                        <div class="member__list-item">
-                            <figure class="member__list-item-thumb">
-                                <img src="./assets/img/member3.png" alt="" class="member__img" />
-                                <img
-                                    src="./assets/icon/member-icon3.svg"
-                                    alt=""
-                                    class="member__decor3"
-                                />
+                            <p class="staff__item-desc">Veterinarian</p>
+                            <h3 class="staff__item-name">Alissa Silva</h3>
+                        </article>
+                        <!-- Staff item 3 -->
+                        <article class="staff__list-item">
+                            <figure class="staff__list-item-thumb">
+                                <img src="./assets/img/member3.png" alt="" class="staff__img" />
                             </figure>
-                            <p class="member__item-desc">Veterinarian</p>
-                            <h3 class="member__item-name">Cindy Harris</h3>
-                        </div>
-                        <div class="member__list-item">
-                            <figure class="member__list-item-thumb">
-                                <img src="./assets/img/member4.png" alt="" class="member__img" />
-                                <img
-                                    src="./assets/icon/member-icon4.svg"
-                                    alt=""
-                                    class="member__decor4"
-                                />
+                            <p class="staff__item-desc">Veterinarian</p>
+                            <h3 class="staff__item-name">Cindy Harris</h3>
+                        </article>
+                        <!-- Staff item 4 -->
+                        <article class="staff__list-item">
+                            <figure class="staff__list-item-thumb">
+                                <img src="./assets/img/member4.png" alt="" class="staff__img" />
                             </figure>
-                            <p class="member__item-desc">Animal Caretaker</p>
-                            <h3 class="member__item-name">Lucas Tony</h3>
-                        </div>
+                            <p class="staff__item-desc">Animal Caretaker</p>
+                            <h3 class="staff__item-name">Lucas Tony</h3>
+                        </article>
                     </div>
                     <div class="action-btn">
-                        <a href="#!" class="btn member-btn__action btn-cta">View All Services</a>
+                        <a href="#!" class="btn staff-btn__action btn-cta">View All Services</a>
                     </div>
                 </div>
             </div>
