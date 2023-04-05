@@ -845,6 +845,10 @@ button {
     background-color: #fff6ed;
 }
 
+.pricing__container {
+    width: 994px;
+}
+
 .pricing__desc {
     margin: 24px auto 0;
     width: 709px;
@@ -921,8 +925,7 @@ button {
     top: -10px;
 }
 
-
-.pricing__list-item {
+.pricing__list {
     margin-top: 56px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -953,6 +956,7 @@ button {
 }
 
 .pricing__stats {
+    font-family: "Sora", sans-serif;
     margin-top: 24px;
     font-weight: 700;
     font-size: 3.3rem;
@@ -965,6 +969,8 @@ button {
     min-width: 246px;
     box-shadow: none;
     transition: 0.25s;
+    background: transparent;
+    /* dat lai mau nen cho button vi button co mau mac dinh */
 }
 
 .pricing-item:hover {
@@ -998,8 +1004,8 @@ button {
     position: absolute;
     top: -1px;
     left: -26px;
-    width: 10px;
-    height: 7px;
+    width: 13px;
+    height: 6px;
     border-left: 2px solid #ff5b2e;
     border-bottom: 2px solid #ff5b2e;
     rotate: -45deg;
