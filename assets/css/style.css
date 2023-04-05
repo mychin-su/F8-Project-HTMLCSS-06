@@ -1310,6 +1310,10 @@ button {
     cursor: pointer;
 }
 
+.icon:hover {
+    background-color: #ff5b2e;
+}
+
 .footer__item2 {
     margin-left: 129px;
     position: relative;
@@ -1329,6 +1333,7 @@ button {
     font-size: 1.4rem;
     line-height: 2;
     color: #656689;
+    cursor: pointer;
 }
 
 .footer__item2-2 {
