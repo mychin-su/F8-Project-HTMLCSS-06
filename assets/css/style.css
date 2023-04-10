@@ -845,7 +845,7 @@ button {
     background-color: #fff6ed;
 }
 
-.pricing__container {
+.pricing-container {
     width: 994px;
 }
 
@@ -935,9 +935,10 @@ button {
 .pricing-item {
     padding: 30px 28px 46px;
     width: 302px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 20px;
     transition: 0.25s;
+    box-shadow: 0px 20px 44px rgba(195, 108, 22, 0.06);
 }
 
 .pricing-label {
@@ -1020,135 +1021,128 @@ button {
 
 /* Reviews */
 .review {
-    padding-top: 53px;
+    padding: 53px 0;
 }
 
-.review__thumb {
-    position: relative;
-    width: 230px;
-}
-
-.review__thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Chiem het chieu ngang the cha */
-    height: 350px;
-    width: 274px;
-    background: #ffda54;
-    border-radius: 137px;
-    z-index: -1;
-}
-
-.review__img {
-    display: block;
-    margin: 0 auto;
-    width: 274px;
-    border-radius: 137px;
-}
-
-.review__row {
+.review__inner {
+    column-gap: 44px;
     display: flex;
     align-items: center;
 }
 
-.review__desc {
-    width: 553px;
-    margin-top: 24px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    color: #000000;
-}
-
-.review__content {
-    position: relative;
-    width: 47%;
-    margin-left: 250px;
-}
-
-.review__name {
-    padding-left: 28px;
-    position: relative;
-    margin-top: 34px;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 1;
-    color: #282828;
-}
-
-.review__name::before {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    display: inline-block;
-    content: "";
-    width: 20px;
-    height: 2px;
-    background-color: #000;
-}
-
-.review__decor {
-    color: #ff5b2e;
-    position: absolute;
-    margin-right: 44px;
+.review__control {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* chiem phan dien tich cua no  */
     width: 54px;
     height: 54px;
     border: 1.5px solid #ffd1c4;
     border-radius: 50%;
+    background-color: transparent;
+    color: #ff5b2e;
 }
 
-.review__decor:hover {
+.review__control:hover {
     color: #fff;
-    background: #ff5b2e;
+    background-color: #ff5b2e;
+    border-color: #ff5b2e;
+    cursor: pointer;
     box-shadow: 0px 5px 27px rgba(255, 91, 46, 0.3);
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
 
-.review__decor1 {
-    position: absolute;
-    top: 50%;
-    left: -100px;
+.review-item {
+    display: flex;
+    align-items: center;
+    column-gap: 115px;
 }
 
-.review__decor2 {
+.review-item__media {
+    margin-top: -52px;
+    position: relative;
+    flex-shrink: 0;
+    width: 274px;
+    border-radius: 137px;
+}
+
+.review-item__media::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    right: -180px;
-    rotate: 180deg;
+    inset: auto 0 0 0;
+    height: 80%;
+    background-color: #ffda54;
+    border-radius: inherit;
+    /* ke thua the cha */
+}
+
+.review-item__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    /* anh chiem het xuong day */
+    /* chiem het chieu ngang the cha */
+    border-radius: inherit;
+    /* ke thua the cha */
+}
+
+.review__quote {
+    width: 553px;
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: #000;
+}
+
+.review-item__author {
+    display: flex;
+    align-items: center;
+    margin-top: 34px;
+    font-family: Sora, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #282828;
+}
+
+.review-item__author::before {
+    margin-right: 8px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 1px;
 }
 
 .review__dots {
+    margin-left: 32px;
+    column-gap: 8px;
     margin-top: 56px;
     display: flex;
     justify-content: center;
 }
 
-.review__dot1 {
-    margin-right: 8px;
-    display: inline-block;
-    width: 24px;
-    height: 8px;
-    background: #ff5b2e;
-    border-radius: 4px;
-}
-
 .review__dot {
-    margin: 0 4px;
-    display: inline-block;
     width: 8px;
     height: 8px;
+    border-radius: 50%;
     border: 1px solid #ff5b2e;
-    border-radius: 4px;
+}
+
+.review__dot-active {
+    width: 24px;
+    background-color: #ff5b2e;
+    border-radius: 99px;
+}
+
+.review__dot:hover {
+    cursor: pointer;
+    background-color: #ff5b2e;
 }
 
 /* Blog */
-
 .blog {
     margin-top: 130px;
 }

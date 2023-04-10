@@ -573,7 +573,7 @@
                     </div>
                     <div class="pricing__list">
                         <!-- Item1 -->
-                        <div class="pricing-item">
+                        <article class="pricing-item">
                             <p class="pricing-label">Basic</p>
                             <h3 class="pricing__title">Day care</h3>
                             <p class="pricing__stats">$150</p>
@@ -590,9 +590,10 @@
                                 <li class="pricing-checked">Custom Meals</li>
                                 <li class="pricing-checked">Grooming 2x</li>
                             </ul>
-                        </div>
+                        </article>
                         <!-- Item2 -->
-                        <div class="pricing-item">
+
+                        <article class="pricing-item">
                             <p class="pricing-label">Exclusive</p>
                             <p class="pricing__title">2X Care</p>
                             <h3 class="pricing__stats">$199</h3>
@@ -608,9 +609,10 @@
                                 <li class="pricing-checked">Custom Meals</li>
                                 <li class="pricing-checked">Grooming 2x</li>
                             </ul>
-                        </div>
+                        </article>
                         <!-- Item3 -->
-                        <div class="pricing-item">
+
+                        <article class="pricing-item">
                             <p class="pricing-label">Platinum</p>
                             <p class="pricing__title">4X Care</p>
                             <h3 class="pricing__stats">$299</h3>
@@ -627,89 +629,105 @@
                                 <li class="pricing-checked">Custom Meals</li>
                                 <li class="pricing-checked">Grooming 2x</li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Review -->
-        <section class="review" id="review">
+        <section class="review">
             <div class="container">
                 <div class="review__inner">
-                    <div class="review__row">
-                        <figure class="review__thumb">
-                            <img src="./assets/img/review.png" alt="" class="review__img" />
-                            <div class="review__decor1 review__decor">
-                                <svg
-                                    class="left"
-                                    width="20"
-                                    height="21"
-                                    viewBox="0 0 20 21"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M16.875 10.9985H3.125"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                    <!-- Review previous -->
+                    <button class="review__control">
+                        <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M16.875 10.9985H3.125"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M8.75 5.37354L3.125 10.9985L8.75 16.6235"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
+
+                    <!-- Review content -->
+                    <div class="review__content">
+                        <div class="review__list">
+                            <!-- review-item1 -->
+                            <article class="review-item">
+                                <figure class="review-item__media">
+                                    <img
+                                        src="./assets/img/review.png"
+                                        alt=""
+                                        class="review-item__img"
                                     />
-                                    <path
-                                        d="M8.75 5.37354L3.125 10.9985L8.75 16.6235"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </div>
-                        </figure>
-                        <section class="review__content">
-                            <h2 class="section__heading">Our Reviews</h2>
-                            <p class="review__desc">
-                                “It was very comforting to recieve a text and pics each day about
-                                our pets and how they were doing. It was also nice that my pets were
-                                in the comfortable environment of their own home and received
-                                playfull attention from our pet sitters as well. Thanks so much!”
-                            </p>
-                            <div class="review__name">Karla Deras</div>
-                            <div class="review__decor2 review__decor">
-                                <svg
-                                    class="right"
-                                    width="20"
-                                    height="21"
-                                    viewBox="0 0 20 21"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M16.875 10.9985H3.125"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                    <path
-                                        d="M8.75 5.37354L3.125 10.9985L8.75 16.6235"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </div>
-                        </section>
+                                </figure>
+                                <section class="review-item__content">
+                                    <h2 class="section__heading">Our Reviews</h2>
+                                    <blockquote class="review__quote">
+                                        “It was very comforting to recieve a text and pics each day
+                                        about our pets and how they were doing. It was also nice
+                                        that my pets were in the comfortable environment of their
+                                        own home and received playfull attention from our pet
+                                        sitters as well. Thanks so much!”
+                                    </blockquote>
+                                    <p class="review-item__author">Karla Deras</p>
+                                </section>
+                            </article>
+                        </div>
+                        <!-- Review dots -->
+                        <div class="review__dots">
+                            <div class="review__dot review__dot-active"></div>
+                            <div class="review__dot"></div>
+                            <div class="review__dot"></div>
+                            <div class="review__dot"></div>
+                        </div>
                     </div>
-                    <div class="review__dots">
-                        <span class="review__dot1"></span>
-                        <span class="review__dot"></span>
-                        <span class="review__dot"></span>
-                        <span class="review__dot dot__last"></span>
-                    </div>
+
+                    <!-- Review next -->
+                    <button class="review__control">
+                        <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M3.125 10.9985H16.875"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M11.25 5.37354L16.875 10.9985L11.25 16.6235"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
+
         <!-- Blog -->
         <section class="blog">
             <div class="container">
