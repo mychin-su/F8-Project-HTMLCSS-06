@@ -1021,7 +1021,15 @@ button {
 
 /* Reviews */
 .review {
-    padding: 53px 0;
+    padding: 104px 0 52px;
+}
+
+.review__content {
+    overflow: hidden;
+}
+
+.review__list {
+    display: flex;
 }
 
 .review__inner {
@@ -1052,10 +1060,16 @@ button {
     box-shadow: 0px 5px 27px rgba(255, 91, 46, 0.3);
 }
 
+.review__control:nth-of-type(2) {
+    margin-left: auto;
+}
+
 .review-item {
     display: flex;
     align-items: center;
     column-gap: 115px;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .review-item__media {
@@ -1371,16 +1385,18 @@ button {
 }
 
 .nav__mobile {
-    transform: translateX(100%);
+    border-radius: 20px;
+    position: relative;
+    transform: translateX(200%);
+    top: 60px;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 200px;
+    width: 871px;
+    background-color: #fff;
     max-width: 100%;
-    background: #fff6ed;
-    transition: transform linear 0.2s, opacity linear 0.2s;
-    opacity: 0;
+    background-image: url(https://images.unsplash.com/photo-1680925723180-ff3cb559c9b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80);
+    transition: transform linear 0.4s, opacity linear 0.2s;
+    background-size: cover;
+    /* opacity: 0; */
 }
 
 .nav__mobile-list {
@@ -1388,19 +1404,11 @@ button {
     padding-left: 30px;
 }
 
-.nav__mobile-link {
-    margin-bottom: 30px;
-    color: #333;
-    display: block;
-    /* de xet padding */
-    padding: 8px 0;
-    font-size: 1.6rem;
-}
-
 .nav__mobile-close {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    color: #fff;
 }
 
 .nav__input:checked ~ .nav__overlay {
@@ -1410,4 +1418,254 @@ button {
 .nav__input:checked ~ .nav__mobile {
     transform: translateX(0%);
     opacity: 1;
+}
+
+.container1 {
+    position: relative;
+    display: flex;
+    width: 870px;
+    margin: 20px auto 0;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+/* Heading */
+.heading {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.heading h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 3.2rem;
+}
+
+.heading p {
+    margin-top: 16px;
+    color: #ccc;
+}
+
+/* Contact info */
+.contact-info {
+    position: relative;
+    flex-shrink: 0;
+    width: 330px;
+    padding: 24px 30px 30px;
+    border-radius: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.contact-info h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.contact-info .desc {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.contact-info .info-item {
+    margin-top: 36px;
+}
+
+.contact-info .info-item .icon-form {
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    color: #ff5b2e;
+}
+
+.contact-info .info-item .value {
+    margin-left: 8px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.socials {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 110px;
+}
+
+.socials .item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.socials .item:hover {
+    background: #ff5b2e;
+}
+
+/* Contact form */
+.contact-form {
+    flex-grow: 1;
+    padding: 28px 32px;
+}
+
+.contact-form:has(:invalid) .submit-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 12px;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    flex-grow: 1;
+}
+
+.form-group:focus-within .form-label:not(.large) {
+    color: #fff;
+}
+
+.form-group:focus-within .form-input {
+    border-color: #fff;
+}
+
+.form-group:has(:invalid:not(:placeholder-shown)) .form-error {
+    visibility: visible;
+    /* De khoi bi giat khi xay ra loi */
+}
+
+.form-label,
+.form-input {
+    display: block;
+    background-color: transparent;
+    caret-color: #fff;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.form-label.large {
+    font-size: 1.3rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #e3e3e9;
+    padding: 8px 0 14px 0;
+    color: #fff;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #ccc;
+}
+
+.form-textarea {
+    resize: none;
+    max-height: 200px;
+    background-color: transparent;
+    caret-color: #fff;
+}
+
+.form-error {
+    margin-top: 4px;
+    font-size: 1.3rem;
+    color: red;
+    visibility: hidden;
+    /* de khoi bi giat khi loi */
+}
+
+/* Radio */
+.radio-group {
+    display: flex;
+    margin-top: 16px;
+}
+
+.radio-btn {
+    display: inline-block;
+}
+
+.radio-btn + .radio-btn {
+    margin-left: 24px;
+}
+
+.radio-btn label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.radio-btn label::before,
+.radio-btn label::after {
+    content: "";
+    display: inline-block;
+}
+
+.radio-btn label::before {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 2px solid  #fff;
+}
+
+.radio-btn [type="radio"] {
+    display: none;
+}
+
+.radio-btn [type="radio"]:checked + label::before {
+    border-color: #5b32dc;
+}
+
+.radio-btn [type="radio"]:checked + label::after {
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 7px;
+    height: 3px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    rotate: -45deg;
+}
+
+.submit-box {
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    min-width: 160px;
+    height: 50px;
+    color: #fff;
+    background: var(--primary-color);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
